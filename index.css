@@ -21,6 +21,11 @@ ul li{
     list-style: none;
 }
 
+/* utils classes */
+.circle{
+    border-radius: 50%;
+}
+
 .main-container{
     height: 100%;
 }
@@ -81,6 +86,30 @@ ul li{
 {
     flex: 1;
 }
+.image-container{
+    height: 20rem;
+    width:  20rem;
+}
+.small-image-container{
+    height: 6rem;
+    width: 6rem;
+}
 .profile-container__repos{
     flex: 3;
+}
+
+.profile__follow_follwing{
+    display: flex;
+    gap: var(--gap-default);
+}
+
+/* ^ profile container right side */
+.repo-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: var(--gap-default);
+}
+.card{
+    display: flex;
 }
