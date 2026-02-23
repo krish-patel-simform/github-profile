@@ -9,6 +9,10 @@
     --header--text-color:#FFF;
     --margin-main: calc((100vw - 1272px)/2);
     --gap-default : 1rem;
+    
+    --padding-default:1rem;
+
+    --border-radius-8:8px
 }   
 
 body{
@@ -24,6 +28,14 @@ ul li{
 /* utils classes */
 .circle{
     border-radius: 50%;
+}
+.icon-container{
+    height: 5rem;
+    width: 5rem;
+}
+.small-icon-container{
+    height: 2rem;
+    width:  2rem;
 }
 
 .main-container{
@@ -55,6 +67,7 @@ ul li{
 
 /* ^ Main Section Style */
 .main{
+    position: relative;
     display: flex;
     flex-direction: column;
     max-width: 1272px;
@@ -65,6 +78,8 @@ ul li{
 .main__navigation-container{
     display: flex;
     border: 1px solid grey;
+    position: sticky;
+    top: 0;
 }
 .main__hidden-div{
     flex: 1;
@@ -112,4 +127,60 @@ ul li{
 }
 .card{
     display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    border-radius: var(--border-radius-8);
+    padding: var(--padding-default);
+    gap: var(--gap-default);
+}
+.card__repo-name{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ^ activity */
+.activity{
+    display: flex;
+    gap: var(--gap-default);
+}
+
+.activity__left{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    /* & > div{
+        border-left: 1px solid grey;
+        border-top: 1px solid grey;
+    } */
+}
+.activity__left__start{
+
+    & h3{
+        border-bottom: 1px solid grey;
+        height: 14px;
+    }
+}
+.activity__left__details{
+
+    position: relative;
+}
+.activity__left__details::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    background-color: grey;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.activity__left__content{
+    display: flex;
+    justify-content: space-between;
+}
+.activity__left__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
