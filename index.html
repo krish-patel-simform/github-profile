@@ -12,33 +12,36 @@
     <div class="main-container">
 
         <!-- header -->
-        <header class="header">
+        <header>
 
-            <!-- header Left -->
-            <nav class="header__left">
-                <span>
-                    <svg>
-                        <use href="./icons.svg#logo"></use>
-                    </svg>
-                </span>
-                <ul class="header__left-list">
-                    <li> <a href="#">Why Github?</a> </li>
-                    <li> <a href="#">Team</a> </li>
-                    <li> <a href="#">Enterprise</a> </li>
-                    <li> <a href="#">Explore</a> </li>
-                    <li> <a href="#">Marketplace</a> </li>
-                    <li> <a href="#">Pricing</a> </li>
-                </ul>
-            </nav>
+            <div class="header">
+                <!-- header Left -->
+                <nav class="header__left">
+                    <figure class="icon-container">
+                        <svg class="icon">
+                            <use href="./icons.svg#logo"></use>
+                        </svg>
+                    </figure>
+                    <ul class="header__left-list">
+                        <li> <a href="#">Why Github?</a> </li>
+                        <li> <a href="#">Team</a> </li>
+                        <li> <a href="#">Enterprise</a> </li>
+                        <li> <a href="#">Explore</a> </li>
+                        <li> <a href="#">Marketplace</a> </li>
+                        <li> <a href="#">Pricing</a> </li>
+                    </ul>
+                </nav>
+    
+                <!-- header right -->
+                <div class="header__right">
+                    <search class="header__search">
+                        <input type="search" name="search" placeholder="Search"/>
+                    </search>
+                    <button class="btn header-btn">Sign in</button>
+                    <button class="btn outline-btn header-btn">Sign up</button>
+                </div> 
+            </div>
 
-            <!-- header right -->
-            <div class="header__right">
-                <search>
-                    <input type="search" name="search" placeholder="Search"/>
-                </search>
-                <button>Sign in</button>
-                <button>Sign up</button>
-            </div> 
         </header>
 
         <!-- main -->
@@ -189,7 +192,7 @@
                                 <use href="./icons.svg#contribution"></use>
                             </svg> -->
 
-                            <svg width="828" height="128" class="js-calendar-graph-svg">
+                            <svg width="auto" height="128" class="js-calendar-graph-svg">
                                 <g transform="translate(10, 20)" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:19148526,&quot;target&quot;:&quot;CONTRIBUTION_CALENDAR_SQUARE&quot;,&quot;user_id&quot;:null,&quot;originating_url&quot;:&quot;https://github.com/profile&quot;}}" data-hydro-click-hmac="43142f2e37b8fca33887f3a6932e04001b254b83d3c9f8a84eaee80eacc9f16b">
       <g transform="translate(0, 0)">
           <rect width="11" height="11" x="16" y="0" class="ContributionCalendar-day" rx="2" ry="2" data-count="0" data-date="2020-10-25" data-level="0"></rect>
@@ -702,7 +705,8 @@
                                 <h3>Contribution activity</h3>
                                 
                                 <div class="activity__left__start">
-                                    <h3><span>October 2021</span></h3>
+                                    <p>
+                                        <span id="after">October 2021</span></p>
                                 </div>
                                 
                                 <div class="activity__left__details">
@@ -724,7 +728,7 @@
                                         </div>
                                         
                                         <div class="activity__left__info">
-                                            <span>
+                                            <span >
                                                 <svg class="small-icon-container">
                                                     <use href="./icons.svg#save"></use>
                                                 </svg>       
@@ -763,7 +767,35 @@
         </main>
 
         <!-- footer -->
-
+        <footer class="footer">
+            <article>
+                <ul class="footer__list">
+                    <li href="#">© 2021 GitHub, Inc.</li>
+                    <li href="#">Terms</li>
+                    <li href="#">Privacy</li>
+                    <li href="#">Security</li>
+                    <li href="#">Status</li>
+                    <li href="#">Docs</li>
+                </ul>
+            </article>
+            
+            <article>
+                <figure class="small-icon-container">
+                    <img src="./icons.svg#logo" height="100%" width="100%">
+                </figure>
+            </article>
+            
+            <article>
+                <ul class="footer__list">
+                    <li href="#">Contact GitHub</li>
+                    <li href="#">Pricing</li>
+                    <li href="#">API</li>
+                    <li href="#">Training</li>
+                    <li href="#">Blog</li>
+                    <li href="#">About</li>
+                </ul>
+            </article>
+        </footer>
     </div>
 </body>
 
