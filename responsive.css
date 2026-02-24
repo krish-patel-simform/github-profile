@@ -1,0 +1,23 @@
+
+@container header (max-width:1020px)
+{
+    #signup-btn{
+        margin-left: auto;
+    }
+    .hidden{
+        display: flex;
+    }
+    .header__search,#signin-btn{
+        display: none;
+    }
+    .header__left-list{
+        display: none;
+    }
+}
+
+@media screen and (max-width:1300px)
+{
+    .wrapper{
+        max-width: 1218px;
+    }
+}
