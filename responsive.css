@@ -18,6 +18,19 @@
     }
 }
 
+
+/* Laptop small Screen */
+@media screen and (max-width:1024px){
+    
+    .activity__right{
+        display: none;
+    }
+    .footer__list{
+        gap:var(--rem-2);
+    }
+
+}
+
 /* table screen */
 @media screen and (max-width:765px)
 {
@@ -78,16 +91,9 @@
     }
 }
 
-/* Laptop small Screen */
-@media screen and (max-width:1024px){
-    
-    .activity__right{
-        display: none;
-    }
+@media screen and (max-width:500px)
+{
     .footer__list{
-        gap:var(--rem-2);
+        gap: var(--rem-1);
     }
-
 }
-
-

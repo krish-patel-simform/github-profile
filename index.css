@@ -199,16 +199,13 @@ header{
 }
 
 .header{
-    /* border: 1px solid var(--color-border-default); */
     font-size: 1.1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: fit-content;
     padding: calc(1.2 * var(--rem-1));
-    /* margin: auto;
-    max-width: 1272px; */
-    
+ 
     & .header__left{
         display: flex;
         align-items: center;
@@ -275,16 +272,11 @@ header{
 
 .main{
     position: relative;
-    /* display: flex;
-    flex-direction: column; */
-    
-    /* border: 1px solid grey; */
+   
 
 }
 .main__navigation-wrapper{
-    /* border-bottom: 1px solid var(--color-border-default); */
-    /* position: sticky;
-    top: 0; */
+
     background-color: #FFF;
 }
 
@@ -294,15 +286,11 @@ header{
     display: grid;
     grid-template-columns: 1fr 3fr;
 
-    /* display: flex; */
-    /* border: 1px solid grey; */
+
     gap: var(--rem-1);
     position: sticky;
     top: 0;
     margin-top: var(--rem-md);
-}
-.profile-container__profile-name{
-
 }
 
 .main__hidden-div{
@@ -360,10 +348,6 @@ header{
 .profile-container{
     gap: var(--rem-1);
     display: flex;
-    /* max-width: 1272px;
-    margin: auto; */
-    /* border: 1px solid grey; */
-    /* background-color: #FF0000; */
 
 }
 .profile-container__profile
@@ -450,7 +434,6 @@ header{
     border-radius: var(--border-radius-8);
     padding: var(--rem-1);
     background-color: #FFF;
-    /* gap: var(--rem-1); */
 
     p{
         color: var(--text-secondary-color);
@@ -535,11 +518,6 @@ header{
     & svg{
         fill: var(--text-secondary-color);
     }
-
-    /* & > div{
-        border-left: 1px solid grey;
-        border-top: 1px solid grey;
-    } */
 }
 .activity__right{
     flex: 1;
@@ -632,7 +610,7 @@ header{
     }
 }
 
-#after::after{
+#activity-year::after{
     margin-left: var(--rem-1);
     content: "";
     height: 1.5px;
@@ -640,16 +618,12 @@ header{
     position: absolute;
     top: 50%;
     background-color: var(--color-calendar-graph-day-bg);
-    /* transform: translateX(-100%); */
 }
 
 /* footer */
 .footer{
     display: flex;
     font-size: 0.8rem;
-    /* flex-wrap: wrap; */
-    /* max-width: 1272px;
-    margin: auto; */
     justify-content: space-between;
     padding-top: 2.5rem;
     margin-top: 2.5rem;
