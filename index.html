@@ -10,6 +10,48 @@
 
   <body>
     <div class="main-container">
+
+      <!-- Left  Drawer  -->
+      <div class="dropdown-container">
+          <!-- Close button -->
+          <div>
+            <svg><use href="./icons.svg#close-btn"></use></svg>
+          </div>
+          
+          <nav>
+            <ul>
+              <li><p>
+                <span>Why GitHub?</span>
+                <svg><use href="./icons.svg#dropdown"></use></svg>
+              </p></li>
+              
+              <li><p>
+                <span>Team</span>
+              </p></li>
+              
+              <li><p>
+                <span>Enterprise</span>
+              </p></li>
+              
+              <li><p>
+                <span>Explore</span>
+                <svg><use href="./icons.svg#dropdown"></use></svg>
+              </p></li>
+
+              <li><p>
+                <span>Marketplace</span>
+              </p></li>
+
+              <li><p>
+                <span>Pricing</span>
+                <svg><use href="./icons.svg#dropdown"></use></svg>
+              </p></li>
+
+            </ul>
+          </nav>
+
+      </div>
+
       <!-- header -->
       <header>
         <div class="header wrapper">
@@ -38,11 +80,16 @@
             <button id="signin-btn" class="btn header-btn">Sign in</button>
             <button id="signup-btn" class="btn outline-btn header-btn">Sign up</button>
             <!-- hamburger -->
-             <figure class="icon-container hidden">
-               <svg class="header-icon">
-                 <use href="./icons.svg#hamburger"></use>
-               </svg>
-             </figure>
+            <input type="checkbox" id="hidden-checkbox" />
+
+            <label for="hidden-checkbox">
+              <figure class="icon-container hidden">
+ 
+                <svg class="header-icon">
+                  <use href="./icons.svg#hamburger"></use>
+                </svg>
+              </figure>
+            </label>
           </div>
         </div>
       </header>
@@ -54,7 +101,16 @@
           <!-- profile navigation -->
           <div class="main__navigation-container wrapper">
             <!-- hidden div -->
-            <div class="main__hidden-div"></div>
+            <div class="main__hidden-div">
+                <figure class="very-small-image-container ">
+                  <img class="circle" src="./public/images/profile.jpeg" height="100%" width="100%" alt="Profile image" />
+                </figure>
+
+                <div>
+                  <p><b>Profile</b></p>
+                  <button>Follow</button>
+                </div>
+            </div>
             <!--  -->
             <nav class="main__navigation">
               <ul>
@@ -101,18 +157,22 @@
             <!-- profile photos and all -->
             <aside class="profile-container__profile">
               <!-- image -->
-              <figure class="image-container neg-mt">
-                <img
-                  class="circle"
-                  src="./public/images/profile.jpeg"
-                  alt="Profile"
-                  height="100%"
-                  width="100%"
-                />
-              </figure>
-
-              <h1>Krish Patel</h1>
-              <p class="secondary-heading-text">Profile</p>
+              
+              <div class="profile-container__profile-name">
+                <figure class="image-container neg-mt">
+                  <img
+                    class="circle"
+                    src="./public/images/profile.jpeg"
+                    alt="Profile"
+                    height="100%"
+                    width="100%"
+                  />
+                </figure>
+                <article>
+                  <h1>Krish Patel</h1>
+                  <p class="secondary-heading-text">Profile</p>
+                </article>
+              </div>
 
               <button class="btn profile-container__profile-btn">Follow</button>
 
@@ -235,9 +295,11 @@
                 <h3>75 contributions in the last year</h3>
 
                 <article >
-                  <svg class="heat-map">
-                      <use href="./icons.svg#contribution"></use>
-                  </svg>
+                  <div class="heatmap-container">
+                    <svg class="heat-map">
+                        <use href="./icons.svg#contribution"></use>
+                    </svg>
+                  </div>
 
                   <div class="contribution__how-container">
                     <a href="#">Learn how we count contributions</a>
@@ -337,6 +399,7 @@
             </section>
           </section>
         </div>
+        
       </main>
 
       <!-- footer -->

@@ -38,6 +38,7 @@
 
 }   
 
+
 body{
     height: 100vh;
 }
@@ -122,6 +123,33 @@ ul li{
 
 .main-container{
     height: 100%;
+    position: relative;
+}
+
+/* drawer container */
+.dropdown-container{
+    display: none;
+    position: absolute;
+    background-color: #FFF;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    height: 100%;
+
+    & nav{
+        flex-grow: 1;
+    }
+
+}
+#hidden-checkbox{
+    visibility: hidden;
+}
+.main-container:has(#hidden-checkbox:checked)
+{
+    .dropdown-container{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /* ^ header styles */
@@ -173,13 +201,13 @@ header{
 }
 
 .header__search{
-
     height: 2rem;
     border-radius: var(--border-radius-5);
     outline: 1px solid white;
 
 
     & input{
+        margin-left: var(--rem-1);
         border: 0;
         background: none;
         outline: none;
@@ -197,7 +225,7 @@ header{
 /* ^ Main Section Style */
 
 .wrapper{
-    max-width: 1272px;
+    max-width: min(1272px,95vw);
     margin: auto;
 }
 
@@ -224,8 +252,19 @@ header{
     top: 0;
     margin-top: var(--rem-md);
 }
+.profile-container__profile-name{
+
+}
+
 .main__hidden-div{
     flex: 1;
+    display: flex;
+
+
+    & div{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .main__navigation{
@@ -233,7 +272,7 @@ header{
     & > ul{
         display: flex;
         gap: var(--rem-1);
-        padding: var(--rem-half) var(--rem-1) 0;
+        padding-top: var(--rem-1);
 
     }
     & a{
@@ -278,6 +317,7 @@ header{
 {
     flex: 1;
 }
+
 .profile-container__profile-btn{
     margin: 1rem 0;
     font-weight: 500;
@@ -287,8 +327,8 @@ header{
     border-radius: var(--border-radius-5);
 }
 .image-container{
-    height: 20rem;
-    width:  20rem;
+    height: min(17.5rem,20vw);
+    width:  min(17.5rem,20vw);
 }
 
 .neg-mt{
@@ -300,6 +340,10 @@ header{
 .small-image-container{
     height: 6rem;
     width: 6rem;
+}
+.very-small-image-container{
+    width:  3rem;
+    height: 3rem;
 }
 .profile-container__achievement{
     & h3{
@@ -324,6 +368,7 @@ header{
 .profile__follow-follwing{
     margin: 2rem 0;
     display: flex;
+    flex-wrap: wrap;
     gap: var(--rem-1);
 
     & a{
@@ -390,7 +435,10 @@ header{
         padding: var(--rem-md) var(--rem-1);
     }
 }
-
+.heatmap-container{
+    overflow: auto;
+    scrollbar-width: thin;
+}
 .heat-map{
     width: 100%;
 }
@@ -545,6 +593,7 @@ header{
 .footer{
     display: flex;
     font-size: 0.8rem;
+    /* flex-wrap: wrap; */
     /* max-width: 1272px;
     margin: auto; */
     justify-content: space-between;
@@ -557,7 +606,7 @@ header{
 .footer__list{
     display: flex;
     
-    gap:var(--rem-2);
+    gap:3rem;
     justify-content: space-between;
 
     & li a{

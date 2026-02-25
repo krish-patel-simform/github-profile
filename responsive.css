@@ -1,5 +1,5 @@
 
-@container header (max-width:1020px)
+@container header (max-width:1024px)
 {
     #signup-btn{
         margin-left: auto;
@@ -13,11 +13,65 @@
     .header__left-list{
         display: none;
     }
-}
-
-@media screen and (max-width:1300px)
-{
-    .wrapper{
-        max-width: 1218px;
+    .activity__right{
+        display: none;
     }
 }
+
+/* table screen */
+@media screen and (max-width:765px)
+{
+    .repo-container{
+        grid-template-columns: 1fr;
+    }
+    .main__navigation-container{
+        margin-top: 0;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    .profile-container{
+        flex-direction: column;
+    }
+    .wrapper{
+        margin: 0 var(--rem-md);
+    }
+    .profile__follow-follwing{
+        margin: 0.5rem 0rem 1rem;
+    }
+    .profile-container__profile-name{
+        display: flex;
+        gap: var(--rem-1);
+        margin-top: var(--rem-half);
+    }
+    .neg-mt{
+        margin-top: 0;
+    }
+    .footer{
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.3rem;
+        
+        figure{
+            display: none;
+        }
+    }
+    .footer__list{
+        justify-content: center;
+    }
+}
+
+/* Laptop small Screen */
+@media screen and (max-width:1024px){
+    
+    .activity__right{
+        display: none;
+    }
+    .footer__list{
+        gap:var(--rem-2);
+    }
+
+}
+
+
