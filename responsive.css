@@ -21,11 +21,21 @@
 /* table screen */
 @media screen and (max-width:765px)
 {
+    .main__hidden-div{
+        display: none;
+    }
     .repo-container{
         grid-template-columns: 1fr;
     }
+    .main__navigation{
+        order: 1;
+        border-bottom: 1px solid var(--color-border-default);
+        overflow: auto;
+        scrollbar-width: thin;
+    }
     .main__navigation-container{
         margin-top: 0;
+        grid-template-columns: 1fr;
     }
     .main{
         display: flex;
@@ -39,6 +49,12 @@
     }
     .profile__follow-follwing{
         margin: 0.5rem 0rem 1rem;
+    }
+    .profile-container__profile{
+        order: 0;
+    }
+    .profile-container__repos{
+        order: 2;
     }
     .profile-container__profile-name{
         display: flex;

@@ -16,9 +16,10 @@
 
     --active-link-bg-color:#FF0000;
     --active-link-text-color:#000;
-    --main-active-text-color:#1374e3;
+    --main-active-text-color:rgb(9, 105, 218);
 
     --bg-btn:#F3F4F6;
+    --font-weight-heading:600;
 
     --text-secondary-color:#6a7078;
 
@@ -76,10 +77,13 @@ ul li{
     padding: var(--rem-half);
 }
 
-.outline-btn{
+/* this is for header outline btn */
+.header--outline-btn{
     outline: 1px solid var(--header--text-color);
     border-radius: var(--border-radius-5);
 }
+
+/* this is for all btn outline   */
 .outline-btn-default{
     outline: 1px solid var(--color-border-default);
     border-radius: var(--border-radius-5);
@@ -129,18 +133,49 @@ ul li{
 /* drawer container */
 .dropdown-container{
     display: none;
-    position: absolute;
+    position: fixed;
     background-color: #FFF;
     z-index: 3;
     top: 0;
     right: 0;
     height: 100%;
+    width: 300px;
+    overflow: auto;
 
     & nav{
         flex-grow: 1;
     }
-
 }
+.dropdown-container--outline-btn{
+        outline: 1px solid var(--color-border-default);
+        border-radius: var(--border-radius-5);
+        padding: var(--rem-half);
+        color: var(--main-active-text-color);
+    }
+.close-btn-container{
+    padding: var(--rem-1);
+    background-color: var(--bg-btn);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dropdown-container__nav-list{
+    padding: 0 var(--rem-half);
+    & p{
+        padding: var(--rem-1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--color-border-default);
+    }
+
+    & li:last-child{
+        display: flex;
+        justify-content: center;
+        padding-top: var(--rem-1);
+    }
+}
+
 #hidden-checkbox{
     visibility: hidden;
 }
@@ -200,6 +235,15 @@ header{
     font-size: 1rem;
 }
 
+.drawer__search{
+    margin-top: var(--rem-1);
+    outline-color: var(--color-border-default) !important;
+    
+    & input{
+        color: var(--medium-gray) !important; 
+    }
+}
+
 .header__search{
     height: 2rem;
     border-radius: var(--border-radius-5);
@@ -238,14 +282,19 @@ header{
 
 }
 .main__navigation-wrapper{
-    border-bottom: 1px solid var(--color-border-default);
-    position: sticky;
-    top: 0;
+    /* border-bottom: 1px solid var(--color-border-default); */
+    /* position: sticky;
+    top: 0; */
     background-color: #FFF;
 }
 
 .main__navigation-container{
-    display: flex;
+
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+    /* display: flex; */
     /* border: 1px solid grey; */
     gap: var(--rem-1);
     position: sticky;
@@ -259,8 +308,9 @@ header{
 .main__hidden-div{
     flex: 1;
     display: flex;
-
-
+    position: sticky;
+    top: 0;
+    background-color: #FFF;
     & div{
         display: flex;
         flex-direction: column;
@@ -269,6 +319,9 @@ header{
 
 .main__navigation{
     flex: 3;
+    position: sticky;
+    top: 0;
+    background-color: #FFF;
     & > ul{
         display: flex;
         gap: var(--rem-1);
@@ -409,6 +462,7 @@ header{
 
     & > a{
         color: var(--main-active-text-color);
+        font-weight: var(--font-weight-heading);
     }
 }
 .card__repo-desc{

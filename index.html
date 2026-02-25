@@ -14,15 +14,17 @@
       <!-- Left  Drawer  -->
       <div class="dropdown-container">
           <!-- Close button -->
-          <div>
-            <svg><use href="./icons.svg#close-btn"></use></svg>
+          <div class="close-btn-container">
+            <label for="hidden-checkbox">
+              <svg class="small-icon-container"><use href="./icons.svg#close-btn"></use></svg>
+            </label>
           </div>
           
           <nav>
-            <ul>
+            <ul class="dropdown-container__nav-list">
               <li><p>
-                <span>Why GitHub?</span>
-                <svg><use href="./icons.svg#dropdown"></use></svg>
+                <span >Why GitHub?</span>
+                <svg class="small-icon-container"><use href="./icons.svg#dropdown"></use></svg>
               </p></li>
               
               <li><p>
@@ -35,7 +37,7 @@
               
               <li><p>
                 <span>Explore</span>
-                <svg><use href="./icons.svg#dropdown"></use></svg>
+                <svg class="small-icon-container"><use href="./icons.svg#dropdown"></use></svg>
               </p></li>
 
               <li><p>
@@ -44,8 +46,19 @@
 
               <li><p>
                 <span>Pricing</span>
-                <svg><use href="./icons.svg#dropdown"></use></svg>
+                <svg class="small-icon-container"><use href="./icons.svg#dropdown"></use></svg>
               </p></li>
+
+              <li>
+                <search class="header__search drawer__search">
+                  <input type="search" name="search" id="drawer-search" placeholder="Search"/>
+                </search>
+              </li>
+
+              <li>
+                  <button class="btn ">Sign in</button>
+                  <button class="btn dropdown-container--outline-btn">Sign up</button>
+              </li>
 
             </ul>
           </nav>
@@ -78,7 +91,7 @@
               <input type="search" name="search" placeholder="Search" />
             </search>
             <button id="signin-btn" class="btn header-btn">Sign in</button>
-            <button id="signup-btn" class="btn outline-btn header-btn">Sign up</button>
+            <button id="signup-btn" class="btn header--outline-btn header-btn">Sign up</button>
             <!-- hamburger -->
             <input type="checkbox" id="hidden-checkbox" />
 
@@ -111,7 +124,8 @@
                   <button>Follow</button>
                 </div>
             </div>
-            <!--  -->
+
+            <!-- navigation -->
             <nav class="main__navigation">
               <ul>
                 <li>
@@ -148,12 +162,7 @@
                 </li>
               </ul>
             </nav>
-          </div>
-        </div>
-
-        <!-- profile  -->
-        <div class="wrapper">
-          <section class="profile-container">
+            
             <!-- profile photos and all -->
             <aside class="profile-container__profile">
               <!-- image -->
@@ -173,9 +182,9 @@
                   <p class="secondary-heading-text">Profile</p>
                 </article>
               </div>
-
+  
               <button class="btn profile-container__profile-btn">Follow</button>
-
+  
               <div class="profile__follow-follwing">
                 <a href="#">
                     <svg class="very-small-icon-container">
@@ -189,9 +198,9 @@
                     </svg>
                     68</a>
               </div>
-
+  
               <hr />
-
+  
               <section class="profile-container__achievement">
                 <h3>Achievements</h3>
                 <figure class="small-image-container">
@@ -205,7 +214,7 @@
                 <a class="secondary-text-color" href="#">Block or Report</a>
               </section>
             </aside>
-
+  
             <!-- repos -->
             <section class="profile-container__repos">
               <!-- repos -->
@@ -218,69 +227,69 @@
                       <a href="#">Ticket-app-microservices</a>
                       <div class="outline-div">Public</div>
                     </div>
-
+  
                     <!-- repo description -->
                     <div>
                       <p class="card__repo-desc" >Simple temporary and not secure room chat app</p>
                     </div>
-
+  
                     <!-- language -->
                   <div class="card__lang">
                         <span class="card__lang-div"></span>
                         <p>TypeScript</p>
                     </div>
                   </article>
-
+  
                   <article class="card">
                     <!-- repo name -->
                     <div class="card__repo-name">
                       <a href="#">Ticket-app-microservices</a>
                       <div class="outline-div">Public</div>
                     </div>
-
+  
                     <!-- repo description -->
                     <div>
                       <p class="card__repo-desc">Simple temporary and not secure room chat app</p>
                     </div>
-
+  
                     <!-- language -->
                    <div class="card__lang">
                         <span class="card__lang-div"></span>
                         <p>TypeScript</p>
                     </div>
                   </article>
-
+  
                   <article class="card">
                     <!-- repo name -->
                     <div class="card__repo-name">
                       <a href="#">Ticket-app-microservices</a>
                       <div class="outline-div">Public</div>
                     </div>
-
+  
                     <!-- repo description -->
                     <div>
                       <p class="card__repo-desc">Simple temporary and not secure room chat app</p>
                     </div>
-
+  
                     <!-- language -->
                     <div class="card__lang">
                         <span class="card__lang-div"></span>
                         <p>TypeScript</p>
                     </div>
                   </article>
-
+  
                   <article class="card">
                     <!-- repo name -->
                     <div class="card__repo-name">
                       <a href="#">Ticket-app-microservices</a>
                       <div class="outline-div">Public</div>
                     </div>
-
+  
                     <!-- repo description -->
                     <div>
                       <p class="card__repo-desc">Simple temporary and not secure room chat app</p>
                     </div>
-
+  
                     <!-- language -->
                     <div class="card__lang">
                         <span class="card__lang-div"></span>
@@ -289,18 +298,18 @@
                   </article>
                 </div>
               </section>
-
+  
               <!-- Contribution -->
               <section class="contribution">
                 <h3>75 contributions in the last year</h3>
-
+  
                 <article >
                   <div class="heatmap-container">
                     <svg class="heat-map">
                         <use href="./icons.svg#contribution"></use>
                     </svg>
                   </div>
-
+  
                   <div class="contribution__how-container">
                     <a href="#">Learn how we count contributions</a>
                     
@@ -322,24 +331,24 @@
                       </svg>
                       More
                     </div>
-
+  
                   </div>
                 </article>
               </section>
-
+  
               <!-- activity -->
               <section>
                 <section class="activity">
                   <!-- activity left -->
                   <article class="activity__left">
                     <h3>Contribution activity</h3>
-
+  
                     <div class="activity__left__start">
                       <p>
                         <span id="after">October 2021</span>
                       </p>
                     </div>
-
+  
                     <div class="activity__left__details">
                       <div class="activity__left__content">
                         <div>
@@ -351,12 +360,12 @@
                           </span>
                           <p class="heading-text">Created 1 repository</p>
                         </div>
-
+  
                         <svg class="md-icon-container">
                           <use href="./icons.svg#fold"></use>
                         </svg>
                       </div>
-
+  
                       <div class="activity__left__info">
                         <span>
                           <svg class="md-icon-container">
@@ -371,10 +380,10 @@
                         <span>Oct 10</span>
                       </div>
                     </div>
-
+  
                     <button class="btn outline-btn-default">Show more activity</button>
                   </article>
-
+  
                   <!-- activity right -->
                   <article class="activity__right">
                     <ul>
@@ -387,7 +396,7 @@
                     </ul>
                   </article>
                 </section>
-
+  
                 <article>
                   <p class="secondary-text-color">
                     Seeing something unexpected? Take a look at the
@@ -395,9 +404,19 @@
                   </p>
                 </article>
               </section>
-
+  
             </section>
+
+          </div>
+
+           <section class="profile-container">
+
           </section>
+        </div>
+
+        <!-- profile  -->
+        <div class="wrapper">
+         
         </div>
         
       </main>
