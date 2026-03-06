@@ -11,6 +11,7 @@
 
     --border-radius-8:8px;
     --border-radius-5:5px;
+    
     --light-gray:#D0D7DF;
     --medium-gray:#57606A;
 
@@ -105,11 +106,11 @@ ul li{
 }
 
 .circle{
-    border-radius: 50%;
+    border-radius: 999px;
 }
 .icon-container{
-    height: 2rem;
-    width:  2rem;
+    height: var(--rem-2);
+    width:  var(--rem-2);
     display: inline-flex;
 }
 .very-small-icon-container{
@@ -117,8 +118,8 @@ ul li{
     width:  1.1rem;
 }
 .small-icon-container{
-    height: 1.5rem;
-    width:  1.5rem;
+    height: var(--rem-md);
+    width:  var(--rem-md);
 }
 .md-icon-container{
     height: 1.3rem;
@@ -232,17 +233,9 @@ header{
     font-size: 1rem;
 }
 
-.drawer__search{
-    margin-top: var(--rem-1);
-    outline-color: var(--color-border-default) !important;
-    
-    & input{
-        color: var(--medium-gray) !important; 
-    }
-}
 
 .header__search{
-    height: 2rem;
+    height: var(--rem-2);
     border-radius: var(--border-radius-5);
     outline: 1px solid white;
 
@@ -261,7 +254,20 @@ header{
 {
     outline: 2px solid white;
 }
+
+.drawer__search{
+    margin-top: var(--rem-1);
+    outline: 1px solid var(--color-border-default);
     
+    & input{
+        color: var(--medium-gray) ; 
+    }
+}
+.drawer__search:has(input:focus)
+{
+    outline: 2px solid var(--color-border-default);
+}
+  
 
 /* ^ Main Section Style */
 
@@ -405,7 +411,7 @@ header{
 }
 
 .profile__follow-follwing{
-    margin: 2rem 0;
+    margin: var(--rem-2) 0;
     display: flex;
     flex-wrap: wrap;
     gap: var(--rem-1);
@@ -537,7 +543,7 @@ header{
     }
 
     & li{
-        padding: 0.5rem;
+        padding: var(--rem-half);
         border-radius: var(--border-radius-5);
     }
     & ul li:first-child{
