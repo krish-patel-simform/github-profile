@@ -73,9 +73,13 @@
         display: flex;
         gap: var(--rem-1);
         margin-top: var(--rem-half);
+        align-items: center;
     }
     .neg-mt{
         margin-top: 0;
+    }
+    .image-container{
+        margin: 0;
     }
     .footer{
         justify-content: center;

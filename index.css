@@ -364,6 +364,8 @@ header{
     border-radius: var(--border-radius-5);
 }
 .image-container{
+    display: block;
+    margin: auto;
     height: min(17.5rem,20vw);
     width:  min(17.5rem,20vw);
 }
@@ -411,6 +413,7 @@ header{
     & a{
         display: flex;
         align-items: center;
+        gap: 0.25rem;
     }
      & a span{
         color: var(--text-secondary-color);
@@ -473,8 +476,9 @@ header{
     }
 }
 .heatmap-container{
-    overflow: auto;
+    overflow-x: auto;
     scrollbar-width: thin;
+
 }
 .heat-map{
     width: 100%;
