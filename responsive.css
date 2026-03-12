@@ -10,10 +10,7 @@
     .header__search,#signin-btn{
         display: none;
     }
-    .header__left-list{
-        display: none;
-    }
-    .activity__right{
+    .header__left-list,.activity__right{
         display: none;
     }
 }
