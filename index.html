@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Github Profile</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./responsive.css">
+
+    <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="./public/images/favicon.svg" >
+  </head>
+
+  <body>
+    <div class="main-container">
+
+      <!-- Left  Drawer  -->
+      <div class="dropdown-container">
+          <!-- Close button -->
+          <div class="close-btn-container">
+            <label for="hidden-checkbox">
+              <svg class="md-icon-container"><use href="./icons.svg#close-btn"></use></svg>
+            </label>
+          </div>
+          
+          <nav>
+            <ul class="dropdown-container__nav-list">
+              <li><p>
+                <span >Why GitHub?</span>
+                <svg class="md-icon-container"><use href="./icons.svg#dropdown"></use></svg>
+              </p></li>
+              
+              <li><p>
+                <span>Team</span>
+              </p></li>
+              
+              <li><p>
+                <span>Enterprise</span>
+              </p></li>
+              
+              <li><p>
+                <span>Explore</span>
+                <svg class="md-icon-container"><use href="./icons.svg#dropdown"></use></svg>
+              </p></li>
+
+              <li><p>
+                <span>Marketplace</span>
+              </p></li>
+
+              <li><p>
+                <span>Pricing</span>
+                <svg class="md-icon-container"><use href="./icons.svg#dropdown"></use></svg>
+              </p></li>
+
+              <li>
+                <search class="header__search drawer__search">
+                  <input type="search" name="search" id="" placeholder="Search"/>
+                </search>
+              </li>
+
+              <li>
+                  <button class="btn ">Sign in</button>
+                  <button class="btn dropdown-container--outline-btn">Sign up</button>
+              </li>
+
+            </ul>
+          </nav>
+
+      </div>
+
+      <!-- header -->
+      <header>
+        <div class="header wrapper">
+          <!-- header Left -->
+          <nav class="header__left">
+            <figure class="icon-container">
+              <svg class="header-icon">
+                <use href="./icons.svg#logo"></use>
+              </svg>
+            </figure>
+            <ul class="header__left-list">
+              <li><a href="#">Why Github?</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Enterprise</a></li>
+              <li><a href="#">Explore</a></li>
+              <li><a href="#">Marketplace</a></li>
+              <li><a href="#">Pricing</a></li>
+            </ul>
+          </nav>
+
+          <!-- header right -->
+          <div class="header__right">
+            <search class="header__search">
+              <input type="search" name="search" placeholder="Search" />
+            </search>
+            <button id="signin-btn" class="btn header-btn">Sign in</button>
+            <button id="signup-btn" class="btn header--outline-btn header-btn">Sign up</button>
+            <!-- hamburger -->
+            <input type="checkbox" id="hidden-checkbox" />
+
+            <label for="hidden-checkbox">
+              <figure class="icon-container hidden">
+ 
+                <svg class="header-icon">
+                  <use href="./icons.svg#hamburger"></use>
+                </svg>
+              </figure>
+            </label>
+          </div>
+        </div>
+      </header>
+
+      <!-- main -->
+      <main class="main">
+
+        <div class="main__navigation-wrapper">
+          <!-- profile navigation -->
+          <div class="main__navigation-container wrapper">
+            <!-- hidden div -->
+            <div class="main__hidden-div">
+                <figure class="very-small-image-container ">
+                  <img class="circle" src="./public/images/profile.jpeg" height="100%" width="100%" alt="Profile image" />
+                </figure>
+
+                <div>
+                  <p><b>Profile</b></p>
+                  <button>Follow</button>
+                </div>
+            </div>
+
+            <!-- navigation -->
+            <nav class="main__navigation">
+              <ul>
+                <li>
+                  <a href="#">
+                    <svg class="very-small-icon-container">
+                      <use href="./icons.svg#overview"></use>
+                    </svg>
+                    Overview
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg class="very-small-icon-container">
+                      <use href="./icons.svg#repository"></use>
+                    </svg>
+                    Overview
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg class="very-small-icon-container">
+                      <use href="./icons.svg#project"></use>
+                    </svg>
+                    Overview
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg class="very-small-icon-container">
+                      <use href="./icons.svg#package"></use>
+                    </svg>
+                    Overview
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            
+            <!-- profile photos and all -->
+            <aside class="profile-container__profile">
+              <!-- image -->
+              
+              <div class="profile-container__profile-name">
+                <figure class="image-container neg-mt">
+                  <img
+                    class="circle"
+                    src="./public/images/profile.jpeg"
+                    alt="Profile"
+                    height="100%"
+                    width="100%"
+                  />
+                </figure>
+                <article>
+                  <h2>Krish Patel</h2>
+                  <p class="secondary-heading-text">Profile</p>
+                </article>
+              </div>
+  
+              <button class="btn profile-container__profile-btn">Follow</button>
+  
+              <div class="profile__follow-follwing">
+                <a href="#">
+                    <svg class="very-small-icon-container">
+                        <use href="./icons.svg#people"></use>
+                    </svg>
+                    29 <span>followers</span></a>
+                <a href="#"> 82 <span>following</span></a>
+                <a href="#"> 
+                    <svg class="very-small-icon-container">
+                        <use href="./icons.svg#star"></use>
+                    </svg>
+                    68</a>
+              </div>
+  
+              <hr />
+  
+              <section class="profile-container__achievement">
+                <h3>Achievements</h3>
+                <figure class="small-image-container">
+                  <img
+                    src="./public/images/achievements.png"
+                    alt="achievements"
+                    height="100%"
+                    width="100%"
+                  />
+                </figure>
+                <a class="secondary-text-color" href="#">Block or Report</a>
+              </section>
+            </aside>
+  
+            <!-- repos -->
+            <section class="profile-container__repos">
+              <!-- repos -->
+              <section class="repos">
+                <h3>Popular repositories</h3>
+                <div class="repo-container">
+                  <article class="card">
+                    <!-- repo name -->
+                    <div class="card__repo-name">
+                      <a href="#">Ticket-app-microservices</a>
+                      <div class="outline-div">Public</div>
+                    </div>
+  
+                    <!-- repo description -->
+                    <div>
+                      <p class="card__repo-desc" >Simple temporary and not secure room chat app</p>
+                    </div>
+  
+                    <!-- language -->
+                  <div class="card__lang">
+                        <span class="card__lang-div"></span>
+                        <p>TypeScript</p>
+                    </div>
+                  </article>
+  
+                  <article class="card">
+                    <!-- repo name -->
+                    <div class="card__repo-name">
+                      <a href="#">Ticket-app-microservices</a>
+                      <div class="outline-div">Public</div>
+                    </div>
+  
+                    <!-- repo description -->
+                    <div>
+                      <p class="card__repo-desc">Simple temporary and not secure room chat app</p>
+                    </div>
+  
+                    <!-- language -->
+                   <div class="card__lang">
+                        <span class="card__lang-div"></span>
+                        <p>TypeScript</p>
+                    </div>
+                  </article>
+  
+                  <article class="card">
+                    <!-- repo name -->
+                    <div class="card__repo-name">
+                      <a href="#">Ticket-app-microservices</a>
+                      <div class="outline-div">Public</div>
+                    </div>
+  
+                    <!-- repo description -->
+                    <div>
+                      <p class="card__repo-desc">Simple temporary and not secure room chat app</p>
+                    </div>
+  
+                    <!-- language -->
+                    <div class="card__lang">
+                        <span class="card__lang-div"></span>
+                        <p>TypeScript</p>
+                    </div>
+                  </article>
+  
+                  <article class="card">
+                    <!-- repo name -->
+                    <div class="card__repo-name">
+                      <a href="#">Ticket-app-microservices</a>
+                      <div class="outline-div">Public</div>
+                    </div>
+  
+                    <!-- repo description -->
+                    <div>
+                      <p class="card__repo-desc">Simple temporary and not secure room chat app</p>
+                    </div>
+  
+                    <!-- language -->
+                    <div class="card__lang">
+                        <span class="card__lang-div"></span>
+                        <p>TypeScript</p>
+                    </div>
+                  </article>
+                </div>
+              </section>
+  
+              <!-- Contribution -->
+              <section class="contribution">
+                <h3>75 contributions in the last year</h3>
+  
+                <article >
+                  <div class="heatmap-container">
+                    <svg class="heat-map"                      
+                    >
+                        <use href="./icons.svg#contribution"></use>
+                    </svg>
+                  </div>
+  
+                  <div class="contribution__how-container">
+                    <a href="#">Learn how we count contributions</a>
+                    
+                    <div>
+                      Less
+                      <svg width="10" height="10" class="d-inline-block">
+                        <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="0"></rect>
+                      </svg>
+                      <svg width="10" height="10" class="d-inline-block">
+                        <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="1"></rect>
+                      </svg>
+                      
+                      <svg width="10" height="10" class="d-inline-block">
+                        <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="2"></rect>
+                      </svg>
+                      
+                      <svg width="10" height="10" class="d-inline-block">
+                        <rect width="10" height="10" class="ContributionCalendar-day" rx="2" ry="2" data-level="4"></rect>
+                      </svg>
+                      More
+                    </div>
+  
+                  </div>
+                </article>
+              </section>
+  
+              <!-- activity -->
+              <section>
+                <section class="activity">
+                  <!-- activity left -->
+                  <article class="activity__left">
+                    <h3>Contribution activity</h3>
+  
+                    <div class="activity__left__start">
+                      <p>
+                        <span id="activity-year">October 2021</span>
+                      </p>
+                    </div>
+  
+                    <div class="activity__left__details">
+                      <div class="activity__left__content">
+                        <div>
+                          <!-- for icon -->
+                          <span class="icon-container ">
+                            <svg class="small-icon-container">
+                              <use href="./icons.svg#save"></use>
+                            </svg>
+                          </span>
+                          <p class="heading-text">Created 1 repository</p>
+                        </div>
+  
+                        <svg class="small-icon-container">
+                          <use href="./icons.svg#fold"></use>
+                        </svg>
+                      </div>
+  
+                      <div class="activity__left__info">
+                        <span>
+                          <svg class="small-icon-container">
+                            <use href="./icons.svg#save"></use>
+                          </svg>
+                          <a href="#" class="link-blue">Profile/p2p-chat</a>
+                        </span>
+                        <span class="card__lang">
+                          <span class="card__lang-div"></span>
+                        <p>TypeScript</p>
+                        </span>
+                        <span>Oct 10</span>
+                      </div>
+                    </div>
+  
+                    <button class="btn outline-btn-default">Show more activity</button>
+                  </article>
+  
+                  <!-- activity right -->
+                  <article class="activity__right">
+                    <ul>
+                      <li ><a href="#">2021</a></li>
+                      <li ><a href="#">2020</a></li>
+                      <li ><a href="#">2019</a></li>
+                      <li ><a href="#">2018</a></li>
+                      <li ><a href="#">2017</a></li>
+                      <li ><a href="#">2016</a></li>
+                    </ul>
+                  </article>
+                </section>
+  
+                <article>
+                  <p class="">
+                    Seeing something unexpected? Take a look at the
+                    <a href="#" class="link-blue">GitHub profile guide</a>
+                  </p>
+                </article>
+              </section>
+  
+            </section>
+
+          </div>
+
+           <section class="profile-container">
+
+          </section>
+        </div>
+
+        <!-- profile  -->
+        <div class="wrapper">
+         
+        </div>
+        
+      </main>
+
+      <!-- footer -->
+      <footer class="footer wrapper">
+        <!-- <article> -->
+          <ul class="footer__list">
+            <li><a>© 2021 GitHub, Inc.</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Status</a></li>
+            <li><a href="#">Docs</a></li>
+          </ul>
+        <!-- </article> -->
+
+          <figure >
+            <svg class="small-icon-container">
+              <use href="./icons.svg#logo"></use>
+            </svg>
+          </figure>
+
+        <!-- <article> -->
+          <ul class="footer__list">
+            <li>
+              <a href="#">Contact GitHub</a>
+            </li>
+            <li>
+              <a href="#">Pricing</a>
+            </li>
+            <li><a href="#">API</a></li>
+            <li><a href="#">Training</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        <!-- </article> -->
+      </footer>
+    </div>
+  </body>
+</html>
