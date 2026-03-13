@@ -272,14 +272,8 @@ header{
 /* ^ Main Section Style */
 
 .wrapper{
-    max-width: min(1272px,95vw);
+    width: min(1272px,95vw);
     margin: auto;
-}
-
-.main{
-    position: relative;
-   
-
 }
 
 
@@ -341,7 +335,6 @@ header{
 
 .main__navigation-container{
 
-    position: relative;
     display: grid;
     grid-template-columns: 1fr 3fr;
 
@@ -393,7 +386,7 @@ header{
 }
 .profile-container__achievement{
     & h3{
-        padding-top: var(--rem-1);
+        margin: var(--rem-1) 0 0;
     }
     & a{
         display: inline-block;
@@ -496,19 +489,19 @@ header{
     display: flex;
     justify-content: space-between;
 
-    & svg:first-child{
-        fill: var(--color-calendar-graph-day-bg);
-    }
-    & svg:nth-child(2)
-    {
-        fill: var(--color-calendar-graph-day-L1-bg);
-    }
-    & svg:nth-child(3)
-    {
-        fill: var(--color-calendar-graph-day-L2-bg);
-    }
-    & svg:last-child{
-        fill: var(--color-calendar-graph-day-L4-bg);
+    & svg{
+        &:first-child{
+            fill: var(--color-calendar-graph-day-bg);
+        }
+        &:nth-child(2){
+            fill: var(--color-calendar-graph-day-L1-bg);
+        }
+        &:nth-child(3){
+            fill: var(--color-calendar-graph-day-L2-bg);
+        }
+        &:last-child{
+            fill: var(--color-calendar-graph-day-L4-bg);
+        }
     }
 }
 
@@ -533,7 +526,7 @@ header{
 .activity__right{
     flex: 1;
     font-size: 0.75rem;
-    & ul{
+    & > ul{
         display: flex;
         gap: var(--rem-half);
         flex-direction: column;
@@ -543,11 +536,11 @@ header{
         color: var(--text-secondary-color);
     }
 
-    & li{
+    & > ul > li{
         padding: var(--rem-half);
         border-radius: var(--border-radius-5);
     }
-    & ul li:first-child{
+    & > ul > li:first-child{
         background-color: var(--main-active-text-color);
 
         & a{
