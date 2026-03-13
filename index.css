@@ -272,7 +272,7 @@ header{
 /* ^ Main Section Style */
 
 .wrapper{
-    width: min(1272px,95vw);
+    max-width: min(1272px,95vw);
     margin: auto;
 }
 
